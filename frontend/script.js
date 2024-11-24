@@ -3,7 +3,7 @@ let tickets = [];
 
 // Load tickets from the backend
 function loadTickets() {
-    fetch('http://localhost:3000/tickets')
+    fetch('https://ticketvalidationtool.onrender.com/tickets') // Updated to use live Render URL
         .then(response => response.json())
         .then(data => {
             tickets = data;
@@ -41,7 +41,7 @@ function submitResponse(response) {
         response,
     };
 
-    fetch('http://localhost:3000/response', {
+    fetch('https://ticketvalidationtool.onrender.com/response', { // Updated to use live Render URL
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ function submitResponse(response) {
 
 // Download responses
 function downloadResponses() {
-    fetch('http://localhost:3000/download-responses')
+    fetch('https://ticketvalidationtool.onrender.com/download-responses') // Updated to use live Render URL
         .then(response => response.blob())
         .then(blob => {
             const url = window.URL.createObjectURL(blob);

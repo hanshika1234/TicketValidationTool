@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Ticket Validation Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="tool-container">
+        <h1>Support Ticket Validation Tool</h1>
+        <!-- Ticket Meta Information -->
+        <div class="section">
+            <h2>Ticket Meta Information</h2>
+            <div id="ticket-meta"></div>
+        </div>
+        <!-- Initial Communication -->
+        <div class="section">
+            <h2>Initial Communication</h2>
+            <div id="initial-communication" class="message-box"></div>
+        </div>
+        <!-- Validation Question -->
+        <div class="section">
+            <h2>Validation Question</h2>
+            <div id="validation-question"></div>
+        </div>
+        <!-- Response Buttons -->
+        <div class="button-container">
+            <button class="response-button" onclick="submitResponse('Yes')">Yes</button>
+            <button class="response-button" onclick="submitResponse('No')">No</button>
+            <button class="response-button" onclick="submitResponse('I Don’t Know')">I Don’t Know</button>
+        </div>
+        <!-- Finish and Download -->
+        <div class="finish-container">
+            <button class="finish-button" onclick="downloadResponses()">Finish and Download Responses</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

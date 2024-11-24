@@ -1,0 +1,206 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(120deg, #d1e8ff, #fce7fe);
+    color: #333;
+    text-align: center;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Headings */
+h1 {
+    color: #ff7a59;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2rem;
+    color: #4caf50;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Landing Page Styling */
+.landing-page {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 50px;
+    background: linear-gradient(135deg, #ffffff, #e0f7fa);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.landing-page:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+.info-box ul {
+    margin-left: 25px;
+    list-style-type: disc;
+    padding: 10px;
+    text-align: left;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.info-box ul li {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.info-box ul li::marker {
+    color: #ff7a59;
+    font-size: 1.5rem;
+}
+
+.start-button {
+    background: linear-gradient(90deg, #ff7a59, #ffae33);
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    margin-top: 20px;
+}
+
+.start-button:hover {
+    background: linear-gradient(90deg, #ffae33, #ff7a59);
+    transform: scale(1.05);
+}
+
+/* Tool Page Styling */
+.tool-container {
+    max-width: 1100px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.tool-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #ff7a59;
+}
+
+.section {
+    margin-bottom: 25px;
+    padding: 30px;
+    background: linear-gradient(135deg, #fce4ec, #f8f9fa);
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    background: #ffffff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+    color: #ff4081;
+    margin-bottom: 15px;
+}
+
+.message-box {
+    padding: 20px;
+    background: #e3f2fd;
+    border-left: 6px solid #4caf50;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Button Styling */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.response-button {
+    background: linear-gradient(90deg, #4caf50, #8bc34a);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.response-button:hover {
+    background: linear-gradient(90deg, #8bc34a, #4caf50);
+    transform: scale(1.1);
+}
+
+.finish-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.finish-button {
+    background: linear-gradient(90deg, #007bff, #4e73df);
+    color: white;
+    padding: 15px 50px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.finish-button:hover {
+    background: linear-gradient(90deg, #4e73df, #007bff);
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tool-container {
+        padding: 20px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .response-button,
+    .finish-button {
+        width: 100%;
+    }
+
+    .landing-page {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+}

@@ -7,7 +7,7 @@ const { Parser } = require('json2csv');
 const path = require('path');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000; // Use dynamic port for deployment
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -73,6 +73,14 @@ app.get('/download-responses', (req, res) => {
     res.header('Content-Type', 'text/csv');
     res.attachment('responses.csv');
     res.send(csvData);
+});
+
+// Serve static files from the frontend folder
+app.use(express.static(path.join(__dirname, '../frontend')));
+
+// Serve index.html for the base route
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/index.html'));
 });
 
 // Start the server
